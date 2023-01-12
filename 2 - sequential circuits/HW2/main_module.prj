@@ -1,0 +1,3 @@
+verilog work "T_Flip_Flop.v"
+verilog work "Four_Bit_Up_Down_Counter.v"
+verilog work "main_module.v"

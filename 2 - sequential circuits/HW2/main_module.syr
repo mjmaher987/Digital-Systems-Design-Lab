@@ -1,0 +1,410 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: main_module.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "main_module.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "main_module"
+Output Format                      : NGC
+Target Device                      : xc3sd3400a-4-fg676
+
+---- Source Options
+Top Module Name                    : main_module
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "T_Flip_Flop.v" in library work
+Compiling verilog file "Four_Bit_Up_Down_Counter.v" in library work
+Module <T_Flip_Flop> compiled
+Compiling verilog file "main_module.v" in library work
+Module <Four_Bit_Up_Down_Counter> compiled
+Module <main_module> compiled
+No errors in compilation
+Analysis of file <"main_module.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <main_module> in library <work>.
+
+Analyzing hierarchy for module <Four_Bit_Up_Down_Counter> in library <work>.
+
+Analyzing hierarchy for module <T_Flip_Flop> in library <work>.
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <main_module>.
+Module <main_module> is correct for synthesis.
+ 
+Analyzing module <Four_Bit_Up_Down_Counter> in library <work>.
+Module <Four_Bit_Up_Down_Counter> is correct for synthesis.
+ 
+Analyzing module <T_Flip_Flop> in library <work>.
+WARNING:Xst:2320 - "T_Flip_Flop.v" line 28: Value for signal Q_output in initial block is not constant. The initialization will be ignored.
+Module <T_Flip_Flop> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <T_Flip_Flop>.
+    Related source file is "T_Flip_Flop.v".
+    Found 1-bit register for signal <Q_output>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <T_Flip_Flop> synthesized.
+
+
+Synthesizing Unit <Four_Bit_Up_Down_Counter>.
+    Related source file is "Four_Bit_Up_Down_Counter.v".
+Unit <Four_Bit_Up_Down_Counter> synthesized.
+
+
+Synthesizing Unit <main_module>.
+    Related source file is "main_module.v".
+    Found 1-bit xor2 for signal <xor_en>.
+Unit <main_module> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ 1-bit register                                        : 4
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <main_module> ...
+
+Optimizing unit <Four_Bit_Up_Down_Counter> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block main_module, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 4
+ Flip-Flops                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : main_module.ngr
+Top Level Output File Name         : main_module
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 12
+
+Cell Usage :
+# BELS                             : 16
+#      LUT2                        : 1
+#      LUT3                        : 7
+#      LUT3_L                      : 1
+#      LUT4                        : 5
+#      LUT4_D                      : 1
+#      LUT4_L                      : 1
+# FlipFlops/Latches                : 4
+#      FDE                         : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 11
+#      IBUF                        : 5
+#      OBUF                        : 6
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3sd3400afg676-4 
+
+ Number of Slices:                        9  out of  23872     0%  
+ Number of Slice Flip Flops:              4  out of  47744     0%  
+ Number of 4 input LUTs:                 16  out of  47744     0%  
+ Number of IOs:                          12
+ Number of bonded IOBs:                  12  out of    469     2%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 4     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 5.235ns (Maximum Frequency: 191.022MHz)
+   Minimum input arrival time before clock: 5.517ns
+   Maximum output required time after clock: 8.193ns
+   Maximum combinational path delay: 6.959ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 5.235ns (frequency: 191.022MHz)
+  Total number of paths / destination ports: 74 / 8
+-------------------------------------------------------------------------
+Delay:               5.235ns (Levels of Logic = 3)
+  Source:            instance1/tff4/Q_output (FF)
+  Destination:       instance1/tff3/Q_output (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: instance1/tff4/Q_output to instance1/tff3/Q_output
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.591   0.776  instance1/tff4/Q_output (instance1/tff4/Q_output)
+     LUT4:I0->O            1   0.648   0.452  enable_SW0 (N5)
+     LUT4_D:I2->O          7   0.648   0.740  enable (enable)
+     LUT3:I2->O            1   0.648   0.420  instance1/tff3/Q_output_not0001 (instance1/tff3/Q_output_not0001)
+     FDE:CE                    0.312          instance1/tff3/Q_output
+    ----------------------------------------
+    Total                      5.235ns (2.847ns logic, 2.388ns route)
+                                       (54.4% logic, 45.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 49 / 8
+-------------------------------------------------------------------------
+Offset:              5.517ns (Levels of Logic = 4)
+  Source:            t (PAD)
+  Destination:       instance1/tff3/Q_output (FF)
+  Destination Clock: clock rising
+
+  Data Path: t to instance1/tff3/Q_output
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.849   0.590  t_IBUF (t_IBUF)
+     LUT3:I0->O            4   0.648   0.667  open11 (up)
+     LUT4_D:I1->O          7   0.643   0.740  enable (enable)
+     LUT3:I2->O            1   0.648   0.420  instance1/tff3/Q_output_not0001 (instance1/tff3/Q_output_not0001)
+     FDE:CE                    0.312          instance1/tff3/Q_output
+    ----------------------------------------
+    Total                      5.517ns (3.100ns logic, 2.417ns route)
+                                       (56.2% logic, 43.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 12 / 6
+-------------------------------------------------------------------------
+Offset:              8.193ns (Levels of Logic = 3)
+  Source:            instance1/tff4/Q_output (FF)
+  Destination:       open (PAD)
+  Source Clock:      clock rising
+
+  Data Path: instance1/tff4/Q_output to open
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              5   0.591   0.776  instance1/tff4/Q_output (instance1/tff4/Q_output)
+     LUT4:I0->O            2   0.648   0.590  and_of_digits1 (and_of_digits)
+     LUT4:I0->O            1   0.648   0.420  open2 (open_OBUF)
+     OBUF:I->O                 4.520          open_OBUF (open)
+    ----------------------------------------
+    Total                      8.193ns (6.407ns logic, 1.786ns route)
+                                       (78.2% logic, 21.8% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 3 / 1
+-------------------------------------------------------------------------
+Delay:               6.959ns (Levels of Logic = 3)
+  Source:            t (PAD)
+  Destination:       open (PAD)
+
+  Data Path: t to open
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.849   0.527  t_IBUF (t_IBUF)
+     LUT4:I1->O            1   0.643   0.420  open2 (open_OBUF)
+     OBUF:I->O                 4.520          open_OBUF (open)
+    ----------------------------------------
+    Total                      6.959ns (6.012ns logic, 0.947ns route)
+                                       (86.4% logic, 13.6% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 2.95 secs
+ 
+--> 
+
+Total memory usage is 4498568 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

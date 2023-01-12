@@ -1,0 +1,5 @@
+verilog isim_temp "T_Flip_Flop.v"
+verilog isim_temp "Four_Bit_Up_Down_Counter.v"
+verilog isim_temp "main_module.v"
+verilog isim_temp "counter_tb.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
