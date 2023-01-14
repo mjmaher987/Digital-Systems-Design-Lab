@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn "C:/Users/mjmah/OneDrive/Desktop/everything/Main/term-summer2022/az-dsd/HW3/HW3/one_bit_cmp.xst" -ofn "C:/Users/mjmah/OneDrive/Desktop/everything/Main/term-summer2022/az-dsd/HW3/HW3/one_bit_cmp.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3sd3400a-fg676-4 one_bit_cmp.ngc one_bit_cmp.ngd  
+map -intstyle ise -p xc3sd3400a-fg676-4 -cm area -ir off -pr off -c 100 -o one_bit_cmp_map.ncd one_bit_cmp.ngd one_bit_cmp.pcf 
+par -w -intstyle ise -ol high -t 1 one_bit_cmp_map.ncd one_bit_cmp.ncd one_bit_cmp.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml one_bit_cmp.twx one_bit_cmp.ncd -o one_bit_cmp.twr one_bit_cmp.pcf 

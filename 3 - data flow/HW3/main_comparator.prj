@@ -1,0 +1,2 @@
+verilog work "one_bit_cmp.v"
+verilog work "main_comparator.v"

@@ -1,0 +1,3 @@
+verilog isim_temp "one_bit_cmp.v"
+verilog isim_temp "main_comparator.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

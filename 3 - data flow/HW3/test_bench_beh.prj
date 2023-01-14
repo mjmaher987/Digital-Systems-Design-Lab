@@ -1,0 +1,4 @@
+verilog work "one_bit_cmp.v"
+verilog work "main_comparator.v"
+verilog work "test_bench-.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
