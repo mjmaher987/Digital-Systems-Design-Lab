@@ -1,8 +1,0 @@
-Release 14.7 Drc P.20131013 (nt64)
-Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
-
-Tue Aug 09 06:15:13 2022
-
-drc -z main_comparator.ncd main_comparator.pcf
-
-DRC detected 0 errors and 0 warnings.

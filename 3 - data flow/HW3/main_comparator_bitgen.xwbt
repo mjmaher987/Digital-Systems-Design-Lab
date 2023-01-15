@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\Users\mjmah\OneDrive\Desktop\everything\Main\term-summer2022\az-dsd\HW3\HW3\main_comparator.ncd
-OUTFILE=C:\Users\mjmah\OneDrive\Desktop\everything\Main\term-summer2022\az-dsd\HW3\HW3\main_comparator.bit
-FAMILY=Spartan-3A DSP
-PART=xc3sd3400a-4fg676
-WORKINGDIR=C:\Users\mjmah\OneDrive\Desktop\everything\Main\term-summer2022\az-dsd\HW3\HW3
-LICENSE=ISE
-USER_INFO=__0_0_0
