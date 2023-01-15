@@ -6,7 +6,7 @@
 //
 // Create Date:   15:20:59 08/12/2022
 // Design Name:   stack
-// Module Name:   C:/Users/mjmah/OneDrive/Desktop/everything/Main/term-summer2022/az-dsd/HW4/HW4_temp/test_bench.v
+// Module Name:   /HW4_temp/test_bench.v
 // Project Name:  HW4_temp
 // Target Device:  
 // Tool versions:  
