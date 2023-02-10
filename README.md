@@ -1,5 +1,5 @@
-# DSDL_SUT
-Digital Systems Design LAB - Sharif University of Technology
+# Digital-Systems-Design-Lab
+Sharif University of Technology
 
 * Mohammad Javad Maheronnaghsh
 
